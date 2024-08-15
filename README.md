@@ -12,7 +12,6 @@ Secondly in classification algorithms like kaiju, there is no .fna or .fasta fil
 We devloped bash scripts to download genome size directly from NCBI server provided we have taxid list available with us. The only limitation is that some species/taxa which have assigned taxid via NCBI but do not have defined genome do not give genome size from our devloped scripts. For these cases we take help of data minning from AI tools like perplexity.com to fetch genome sizes with mentioning of the sources/research papers/portal which mentions it. 
 
 
-![image](https://github.com/user-attachments/assets/ebd59d18-04ea-49eb-a8ec-a76724512f4f)
 
 
 
