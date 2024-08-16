@@ -26,4 +26,4 @@ We devloped bash scripts to download genome size directly from NCBI server provi
 
 ![image](https://github.com/user-attachments/assets/2756722f-a0f6-4285-8938-27d3745bb8f2)
 
-![image](https://github.com/user-attachments/assets/93e2ccf4-376d-457c-941a-4c0a1f7ae24d)
+![image](https://github.com/user-attachments/assets/825dce63-1e45-44c7-a12d-56bbde5a73c2)
