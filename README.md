@@ -1,6 +1,6 @@
 # Genome-Size-Annotation
 # Script is Written by Mr Arpit Mathur, who at the time of devloping is working at Dr Nikhil Patkar's lab at ACTREC, Tata Memorial Center, Navi Mumbai
-# any quries regarding can be directed to arpit20328@iiitd.ac.in or one can put it in issues section. 
+# any queries can be directed to arpit20328@iiitd.ac.in or one can put it in issues section. 
 
 
 Scripts to Download Genome Size from NCBI Server 
