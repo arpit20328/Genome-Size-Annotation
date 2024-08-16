@@ -1,4 +1,8 @@
 # Genome-Size-Annotation
+# Script is Written by Mr Arpit Mathur, who at the time of devloping is working at Dr Nikhil Patkar's lab at ACTREC, Tata Memorial Center, Navi Mumbai
+# any quries regarding can be directed to arpit20328@iiitd.ac.in or one can put it in issues section. 
+
+
 Scripts to Download Genome Size from NCBI Server 
 
 Metagenomics Analysis often require genome size to calculate abundance estimation. for eg a normalized abundance is calculate on the concept of depth of coverage which is essentially total amount of assigned reads to a taxa divided by taxa sequence length. 
