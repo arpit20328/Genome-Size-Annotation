@@ -18,7 +18,7 @@ We devloped bash scripts to download genome size directly from NCBI server provi
 Some taxid still will not be having expected genome size in Genome Check NCBI API.  For these cases we took help of AI tools like perplexity.com to fetch genome sizes with mentioning of the sources/research papers/portal which mentions it. Our curated database mentions source of the information from where genome size is extracted. 
 
 
-![image](https://github.com/user-attachments/assets/876fd8bf-d167-428b-85c0-d41e186ca9ad)
+![image](https://github.com/user-attachments/assets/a2733c74-9544-4b5d-841a-f0459022a865)
 
 
 ![image](https://github.com/user-attachments/assets/6006f78e-6af2-4149-b5b9-9fe946b66426)
