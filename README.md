@@ -5,7 +5,7 @@ Data is published on Zenodo.org server as well: Please cite when you used Genome
 # https://zenodo.org/records/13368462
 
 
-# Script is Written by Mr Arpit Mathur, who at the time of devloping is working at Dr Nikhil Patkar's lab at ACTREC, Tata Memorial Center, Navi Mumbai
+ Script is Written by Mr Arpit Mathur, who at the time of devloping is working at Dr Nikhil Patkar's lab at ACTREC, Tata Memorial Center, Navi Mumbai
 
 
 Scripts to Download Genome Size from NCBI Server 
