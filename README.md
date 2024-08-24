@@ -1,6 +1,10 @@
 # Genome-Size-Annotation
+
+# Data is published on Zenodo.org server as well: Please cite when you used Genome-Size_Annotation tool 
+# https://zenodo.org/records/13368462
+
+
 # Script is Written by Mr Arpit Mathur, who at the time of devloping is working at Dr Nikhil Patkar's lab at ACTREC, Tata Memorial Center, Navi Mumbai
-# Queries can be directed in the issues section. 
 
 
 Scripts to Download Genome Size from NCBI Server 
@@ -29,8 +33,6 @@ Some taxid still will not be having expected genome size in Genome Check NCBI AP
 
 *Please note that for kraken2 curated dataset, we used data mining from the AI search engine perplexity.ai while for kaiju we did not use perplexity, ai, and any species whose genome size was not found was labeled "NA"
 
-# We have published this data on Zenodo.org server as well: Please cite when you used Genome-Size_Annotation tool 
-# https://zenodo.org/records/13368462
 ![image](https://github.com/user-attachments/assets/a2733c74-9544-4b5d-841a-f0459022a865)
 
 
