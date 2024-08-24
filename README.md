@@ -1,6 +1,7 @@
 # Genome-Size-Annotation
 
-# Data is published on Zenodo.org server as well: Please cite when you used Genome-Size_Annotation tool 
+Data is published on Zenodo.org server as well: Please cite when you used Genome-Size_Annotation tool 
+
 # https://zenodo.org/records/13368462
 
 
