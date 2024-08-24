@@ -23,14 +23,15 @@ We devloped bash scripts to download genome size directly from NCBI server provi
 Some taxid still will not be having expected genome size in Genome Check NCBI API.  For these cases we took help of AI tools like perplexity.com to fetch genome sizes with mentioning of the sources/research papers/portal which mentions it. Our curated database mentions source of the information from where genome size is extracted. 
 
 
-# Our curated dataset is of bacterial species or strains detected along with their genome size in 107 AML patients diagnosed with Sepsis clinically. Cell-free DNA profiles of patients were built and sequencing was done in Illumina (NovaSeq and NextSeq). Bioinformatic analysis was performed using two classification algorithms namely kraken2 and kaiju. For kraken2  based classification reference bacterial index developed by Carlo Ferravante et al (Zenodo 2020)  (link: https://zenodo.org/records/4055180) was used, while for kaiju-based classification reference database named "nr_euk" dated "2023-05-10" (link: https://bioinformatics-centre.github.io/kaiju/downloads.html) was used.
+ Our curated dataset is of bacterial species or strains detected along with their genome size in 107 AML patients diagnosed with Sepsis clinically. Cell-free DNA profiles of patients were built and sequencing was done in Illumina (NovaSeq and NextSeq). Bioinformatic analysis was performed using two classification algorithms namely kraken2 and kaiju. For kraken2  based classification reference bacterial index developed by Carlo Ferravante et al (Zenodo 2020)  (link: https://zenodo.org/records/4055180) was used, while for kaiju-based classification reference database named "nr_euk" dated "2023-05-10" (link: https://bioinformatics-centre.github.io/kaiju/downloads.html) was used.
 
 
 
 # We have curated two datasets
 
-# Kraken2 dataset named "FINAL METAGENOMIC DATA MASTERSHEET - kraken_genome_annotation"
-# Kaiju dataset named "FINAL METAGENOMIC DATA MASTERSHEET - kaiju_genome_annotation"
+Kraken2 dataset named "FINAL METAGENOMIC DATA MASTERSHEET - kraken_genome_annotation"
+
+Kaiju dataset named "FINAL METAGENOMIC DATA MASTERSHEET - kaiju_genome_annotation"
 
 *Please note that for kraken2 curated dataset, we used data mining from the AI search engine perplexity.ai while for kaiju we did not use perplexity, ai, and any species whose genome size was not found was labeled "NA"
 
