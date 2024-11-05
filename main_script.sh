@@ -43,7 +43,7 @@ awk '{print $1}' extracted_numbers.tsv  | while read taxon_id; do datasets summa
 
 mkdir  "$destination/files_size_less_than_3k_bytes
 
-find /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size -type f -name "*.txt" -size -3k -exec mv {} /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/files_size_less_than_3k_byte/ \;
+find $PWD -type f -name "*.txt" -size -3k -exec mv {} files_size_less_than_3k_byte/ \;
 
 cd   $destination/files_size_less_than_3k_bytes
 
