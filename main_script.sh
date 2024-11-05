@@ -59,7 +59,7 @@ awk '{print $1}' extracted_numbers.tsv  | while read taxon_id; do datasets summa
 
 
 
-find /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/files_size_less_than_3_byte -type f -name "*.txt" -size +3k -exec mv {} /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/  \;
+find $PWD -type f -name "*.txt" -size +3k -exec mv {} /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/  \;
 
 
 cd /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/
