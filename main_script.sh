@@ -29,25 +29,14 @@ cp *.txt  /home/arpit20328/bracken_genome_size_estimations/
 cd /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/
 mkdir seq_lengths
 find $PWD -maxdepth 1 -name "*.txt" -exec bash -c 'grep -Eo "\"total_sequence_length\":\"[0-9]+\"" "$1" | sed "s/\"total_sequence_length\":\"\([0-9]\+\)\"/\1/" > $PWD/seq_lengths/seq_length_$(basename "$1")' _ {} \;
-
-
 cd seq_lengths
-
-for file in $PWD/*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
-
-
+for file in $PWD/seq_length_taxon_*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
 cd   /home/arpit20328/bracken_genome_size_estimations/
-
-
 mkdir seq_lengths
-
-find /home/arpit20328/bracken_genome_size_estimations/ -maxdepth 1 -name "*.txt" -exec bash -c 'grep -Eo "\"total_sequence_length\":\"[0-9]+\"" "$1" | sed "s/\"total_sequence_length\":\"\([0-9]\+\)\"/\1/" > /home/arpit20328/bracken_genome_size_estimations/seq_lengths/seq_length_$(basename "$1")' _ {} \;
-
-
-
+find $PWD -maxdepth 1 -name "*.txt" -exec bash -c 'grep -Eo "\"total_sequence_length\":\"[0-9]+\"" "$1" | sed "s/\"total_sequence_length\":\"\([0-9]\+\)\"/\1/" > $PWD/seq_lengths/seq_length_$(basename "$1")' _ {} \;
 cd  seq_lengths
+for file in $PWD/seq_length_taxon_*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
 
-for file in $PWD/*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
 
  
 find /home/arpit20328/bracken_genome_size_estimations/seq_lengths/ -name "seq_length_taxon_*.txt" -exec bash -c 'taxid=$(basename "$1" .txt | sed "s/seq_length_taxon_//"); seq_length=$(grep -o "average:[0-9.e+-]*" "$1" | sed "s/average://"); echo -e "$taxid\t$seq_length"' _ {} \; > /home/arpit20328/bracken_genome_size_estimations/seq_lengths/taxon_seq_lengths_1.tsv
