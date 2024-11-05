@@ -24,18 +24,11 @@ ls taxon_*.txt | sed -e 's/taxon_//' -e 's/.txt//' > extracted_numbers.tsv
 sed 's/[^a-zA-Z0-9\t]//g' extracted_numbers.tsv > temp.tsv && mv temp.tsv extracted_numbers.tsv
 awk '{print $1}' extracted_numbers.tsv  | while read taxon_id; do datasets summary genome taxon $taxon_id > taxon_$taxon_id.txt; done
 find $PWD -type f -name "*.txt" -size +3k -exec mv {} /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/  \;
-
-
 cd /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/
-
-
 cp *.txt  /home/arpit20328/bracken_genome_size_estimations/
-
 cd /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/
-
 mkdir seq_lengths
-
-find /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/ -maxdepth 1 -name "*.txt" -exec bash -c 'grep -Eo "\"total_sequence_length\":\"[0-9]+\"" "$1" | sed "s/\"total_sequence_length\":\"\([0-9]\+\)\"/\1/" > /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/seq_lengths/seq_length_$(basename "$1")' _ {} \;
+find $PWD -maxdepth 1 -name "*.txt" -exec bash -c 'grep -Eo "\"total_sequence_length\":\"[0-9]+\"" "$1" | sed "s/\"total_sequence_length\":\"\([0-9]\+\)\"/\1/" > $PWD/seq_lengths/seq_length_$(basename "$1")' _ {} \;
 
 
 cd seq_lengths
