@@ -9,7 +9,7 @@ cd genome_annotation_by_arpit
 sed 's/[^a-zA-Z0-9\t]//g' file.tsv > temp.tsv && mv temp.tsv file.tsv
 
 
-awk '{print $1}' /home/arpit20328/bracken_genome_size_estimations/Bracken2_total_unique_taxon_genome_size_annotations.tsv  | while read taxon_id; do datasets summary genome taxon $taxon_id --reference > taxon_$taxon_id.txt; done
+awk '{print $1}' file.tsv  | while read taxon_id; do datasets summary genome taxon $taxon_id --reference > taxon_$taxon_id.txt; done
 
 
 
