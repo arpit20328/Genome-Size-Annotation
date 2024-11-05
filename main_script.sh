@@ -90,12 +90,9 @@ find /home/arpit20328/bracken_genome_size_estimations/ -maxdepth 1 -name "*.txt"
 
 cd  seq_lengths
 
+for file in $PWD/*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
 
- for file in /home/arpit20328/bracken_genome_size_estimations/seq_lengths/*.txt; do \
-    avg=$(awk '{s+=$1} END {print s/NR}' "$file"); \
-    echo "average:$avg" >> "$file"; \
- done
-
+ 
 find /home/arpit20328/bracken_genome_size_estimations/seq_lengths/ -name "seq_length_taxon_*.txt" -exec bash -c 'taxid=$(basename "$1" .txt | sed "s/seq_length_taxon_//"); seq_length=$(grep -o "average:[0-9.e+-]*" "$1" | sed "s/average://"); echo -e "$taxid\t$seq_length"' _ {} \; > /home/arpit20328/bracken_genome_size_estimations/seq_lengths/taxon_seq_lengths_1.tsv
 
 
