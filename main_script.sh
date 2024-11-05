@@ -49,8 +49,11 @@ cd   $destination/files_size_less_than_3k_bytes
 
 #another round to make these sizes are not extractable 
 
+ls taxon_*.txt | sed -e 's/taxon_//' -e 's/.txt//' > extracted_numbers.tsv
 
-cd  /home/arpit20328/files_having_zero_or_19_byte_size/files_size_less_than_3k_bytes && ls taxon_*.txt | sed -e 's/taxon_//' -e 's/.txt//' > extracted_numbers.tsv
+#Make your tsv file, free of special characters and spaces via following command
+sed 's/[^a-zA-Z0-9\t]//g' extracted_numbers.tsv > temp.tsv && mv temp.tsv extracted_numbers.tsv
+
 
 awk '{print $1}' extracted_numbers.tsv  | while read taxon_id; do datasets summary genome taxon $taxon_id > taxon_$taxon_id.txt; done
 
