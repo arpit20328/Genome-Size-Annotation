@@ -34,10 +34,10 @@ echo "Files with size 0 or 19 bytes have been copied to $destination"
 
 cd "$destination"
 
-cd  /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/ && ls taxon_*.txt | sed -e 's/taxon_//' -e 's/.tx
-t//' > extracted_numbers.tsv
+ls taxon_*.txt | sed -e 's/taxon_//' -e 's/.txt//' > extracted_numbers.tsv
 
-
+#Make your tsv file, free of special characters and spaces via following command
+sed 's/[^a-zA-Z0-9\t]//g' extracted_numbers.tsv > temp.tsv && mv temp.tsv extracted_numbers.tsv
  
 awk '{print $1}' extracted_numbers.tsv  | while read taxon_id; do datasets summary genome taxon $taxon_id > taxon_$taxon_id.txt; done
 
