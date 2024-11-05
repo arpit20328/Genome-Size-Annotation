@@ -76,11 +76,8 @@ find /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_by
 
 cd seq_lengths
 
-for file in /home/arpit20328/bracken_genome_size_estimations/files_having_zero_or_19_byte_size/seq_lengths/*.txt; do \
-    avg=$(awk '{s+=$1} END {print s/NR}' "$file"); \
-    echo "average:$avg" >> "$file"; \
-done
- 
+for file in $PWD/*.txt; do avg=$(awk '{s+=$1} END {print s/NR}' "$file"); echo "average: $avg" >> "$file"; done
+
 
 cd   /home/arpit20328/bracken_genome_size_estimations/
 
